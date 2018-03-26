@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-ov2500",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version patch": "npm version patch --force -m 'Release %s'",
+    "version minor": "npm version minor --force -m 'Release %s'",
+    "version major": "npm version major --force -m 'Release %s'"
+  },
+  "author": "",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "ov2500": "ov2500.js",
+      "ov2500-devices":"devices.js",
+      "ov2500-wlanclientlist":"wlanClientlist.js"
+    }
+  },
+  "dependencies": {
+    "ale-ov2500-node": "^0.1.1"
+  }
+}
