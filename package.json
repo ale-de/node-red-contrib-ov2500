@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ov2500",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,11 +14,11 @@
   "node-red": {
     "nodes": {
       "ov2500": "ov2500.js",
-      "ov2500-devices":"devices.js",
-      "ov2500-wlanclientlist":"wlanClientlist.js"
+      "ov2500-devices": "devices.js",
+      "ov2500-wlanclientlist": "wlanClientlist.js"
     }
   },
   "dependencies": {
-    "ale-ov2500-node": "^0.1.1"
+    "ale-ov2500-node": "^0.1.2"
   }
 }
