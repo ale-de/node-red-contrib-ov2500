@@ -4,7 +4,7 @@ This node allows to perform REST API calls to the Alcatel-Lucent Enterprise Omni
 
 **Install**
 
-`$ npm install --save node-red-contrib-ov2500`
+`$ npm install -g node-red-contrib-ov2500`
 
 **Usage**
 
