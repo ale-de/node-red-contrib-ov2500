@@ -11,6 +11,8 @@ module.exports = function (RED) {
             server.ov.getWlanClientList(server.ov.mode).then((result)=> {
                 console.log("Retrieved %d WLAN client list from OV", result.length);
                 this.status({fill:"green",shape:"dot",text:"Retrieved WLAN Client list from OV:" + result.length});
+                msg.payload = result;
+                this.send(msg);
             }).catch(err=>{
                 console.log("Error retrieving WLAN Client list from OV", err);
                 this.status({fill:"red",shape:"dot",text:"Error retrieving WLAN Client list"});

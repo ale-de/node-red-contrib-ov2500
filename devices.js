@@ -11,6 +11,8 @@ module.exports = function (RED) {
             server.ov.getDevices().then((result)=> {
                 console.log("Retrieved %d devices from OV", result.length);
                 this.status({fill:"green",shape:"dot",text:"Retrieved devices from OV:" + result.length});
+                msg.payload = result;
+                this.send(msg);
             }).catch(err=>{
                 console.log("Error retrieving devices from OV", err);
                 this.status({fill:"red",shape:"dot",text:"Error retrieving devices"});

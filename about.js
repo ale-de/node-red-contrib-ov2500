@@ -1,21 +1,20 @@
 module.exports = function (RED) {
-    function clientList(config) {
+    function about(config) {
         RED.nodes.createNode(this, config);
         var nde = this;
-        this.error("Entering wlanclientlist");
+        this.error("Entering about");
         var server = RED.nodes.getNode(config.server);
-        this.status({fill:"yellow",shape:"dot",text:"No WLAN client list retrieved"});
+        this.status({fill:"yellow",shape:"dot",text:"No Info"});
 
         nde.on('input', function (msg) {
-            this.status({fill:"yellow",shape:"dot",text:"Retrieving WLAN client list from OV ..."});
-            server.ov.getWlanClientList(server.ov.mode).then((result)=> {
-                console.log("Retrieved %d WLAN client list from OV", result.length);
-                this.status({fill:"green",shape:"dot",text:"Retrieved WLAN Client list from OV:" + result.length});
+            this.status({fill:"yellow",shape:"dot",text:"Retrieving OV info ..."});
+            server.ov.about().then((result)=> {
+                this.status({fill:"green",shape:"dot",text:result.fullProductName});
                 msg.payload = result;
                 this.send(msg);
             }).catch(err=>{
-                console.log("Error retrieving WLAN Client list from OV", err);
-                this.status({fill:"red",shape:"dot",text:"Error retrieving WLAN Client list"});
+                console.log("Error retrieving OV info", err);
+                this.status({fill:"red",shape:"dot",text:"Error retrieving OV Info"});
             });
 
         });
@@ -29,5 +28,5 @@ module.exports = function (RED) {
         });
     }
 
-    RED.nodes.registerType("ov2500-wlanclientlist", clientList);
+    RED.nodes.registerType("ov2500-wlanclientlist", about);
 };
