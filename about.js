@@ -28,5 +28,5 @@ module.exports = function (RED) {
         });
     }
 
-    RED.nodes.registerType("ov2500-wlanclientlist", about);
+    RED.nodes.registerType("ov2500-about", about);
 };
