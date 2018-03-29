@@ -2,7 +2,7 @@ module.exports = function (RED) {
     function clientList(config) {
         RED.nodes.createNode(this, config);
         var nde = this;
-        this.error("Entering wlanclientlist");
+        //this.error("Entering wlanclientlist");
         var server = RED.nodes.getNode(config.server);
         this.status({fill:"yellow",shape:"dot",text:"No WLAN client list retrieved"});
 

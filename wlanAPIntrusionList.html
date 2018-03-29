@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('ov2500-wlanclientlist',{
+    RED.nodes.registerType('ov2500-wlanapintrusionlist',{
         category: 'ALE',
         color: '#a6bbcf',
         defaults: {
@@ -10,12 +10,12 @@
         outputs:1,
         icon: "file.png",
         label: function() {
-            return this.name||"ov2500-wlanclientlist";
+            return this.name||"ov2500-wlanapintrusionlist";
         }
     });
 </script>
 
-<script type="text/x-red" data-template-name="ov2500-wlanclientlist">
+<script type="text/x-red" data-template-name="ov2500-wlanapintrusionlist">
     <div class="form-row">
         <div class="form-row">
         <label for="node-input-server"><i class="icon-tag"></i> Server</label>
@@ -27,5 +27,5 @@
 </script>
 
 <script type="text/x-red" data-help-name="ov2500">
-    <p>A node to retrieve WLAN Client list from Alcatel-Lucent Enterprise OmniVista2500 Network Manager</p>
+    <p>A node to retrieve WLAN Intrusive APs list from Alcatel-Lucent Enterprise OmniVista2500 Network Manager</p>
 </script>
