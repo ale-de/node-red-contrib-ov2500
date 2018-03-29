@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ov2500",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "node-red nodes to have API access to the Alcatel-Lucent enterprise OV2500 Network Manager",
   "main": "index.js",
   "scripts": {
