@@ -25,3 +25,7 @@ Retrieve the list of devices in OV2500
 **WlanClientList** 
 Retrieve list of connected WLAN Devices
 ```
+```
+**WlanAPintrusionList** 
+Retrieve list of connected WLAN Devices
+```
