@@ -1,13 +1,14 @@
 {
   "name": "node-red-contrib-ov2500",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "node-red nodes to have API access to the Alcatel-Lucent enterprise OV2500 Network Manager",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "version patch": "npm version patch --force -m 'Release %s'",
     "version minor": "npm version minor --force -m 'Release %s'",
-    "version major": "npm version major --force -m 'Release %s'"
+    "version major": "npm version major --force -m 'Release %s'",
+    "publish": "npm publish"
   },
   "keywords": [
     "node-red",
@@ -25,7 +26,9 @@
       "ov2500-wlanclientlist": "wlanClientlist.js",
       "ov2500-about": "about.js",
       "ov2500-wlanapintrusionlist": "wlanAPIntrusionList.js",
-      "ov2500-authrecordlist": "authRecordList.js"
+      "ov2500-authrecordlist": "authRecordList.js",
+      "ov2500-addaccount": "addAccount.js",
+      "ov2500-accessroleprofilelist": "accessRoleProfileList.js"
     }
   },
   "dependencies": {

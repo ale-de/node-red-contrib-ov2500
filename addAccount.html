@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('ov2500-addaccount',{
+        category: 'ALE',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value: ""},
+            server: {value:"",type:"ov2500"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"ov2500-addaccount";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="ov2500-addaccount">
+    <div class="form-row">
+        <div class="form-row">
+        <label for="node-input-server"><i class="icon-tag"></i> Server</label>
+        <input type="text" id="node-input-server">
+    </div>
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="ov2500">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ov2500-addaccount">
+    <p>A node to add account to employee account table of Alcatel-Lucent Enterprise OmniVista2500 Network Manager</p>
+</script>
