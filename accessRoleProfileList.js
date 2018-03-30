@@ -1,21 +1,21 @@
 module.exports = function (RED) {
-    function clientList(config) {
+    function roleList(config) {
         RED.nodes.createNode(this, config);
         var nde = this;
         //this.error("Entering wlanclientlist");
         var server = RED.nodes.getNode(config.server);
-        this.status({fill:"yellow",shape:"dot",text:"No WLAN client list retrieved"});
+        this.status({fill:"yellow",shape:"dot",text:"No Access role profiles list retrieved"});
 
         nde.on('input', function (msg) {
             this.status({fill:"yellow",shape:"dot",text:"Retrieving WLAN client list from OV ..."});
-            server.ov.getWlanClientList(server.ov.mode).then((result)=> {
-                console.log("Retrieved %d WLAN client list from OV", result.length);
-                this.status({fill:"green",shape:"dot",text:"Retrieved WLAN Client list from OV:" + result.length});
+            server.ov.getAllAccessRoleProfileList().then((result)=> {
+                console.log("Retrieved %d Access role profiles list from OV", result.length);
+                this.status({fill:"green",shape:"dot",text:"Retrieved Access role profiles list from OV:" + result.length});
                 msg.payload = result;
                 this.send(msg);
             }).catch(err=>{
-                console.log("Error retrieving WLAN Client list from OV", err);
-                this.status({fill:"red",shape:"dot",text:"Error retrieving WLAN Client list"});
+                console.log("Error retrieving Access role profiles list from OV", err);
+                this.status({fill:"red",shape:"dot",text:"Error retrieving Access role profiles list"});
             });
 
         });
@@ -29,5 +29,5 @@ module.exports = function (RED) {
         });
     }
 
-    RED.nodes.registerType("ov2500-wlanclientlist", clientList);
+    RED.nodes.registerType("ov2500-accessroleprofilelist", roleList);
 };

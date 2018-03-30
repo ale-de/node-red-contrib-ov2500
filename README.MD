@@ -29,3 +29,19 @@ Retrieve list of connected WLAN Devices
 **WlanAPintrusionList** 
 Retrieve list of connected WLAN Devices
 ```
+```
+**AccessRoleProfileList** v0.1.9
+Retrieve list of Access role profile templates
+```
+```
+**addAccount** v0.1.9
+Add account to employee account table
+```
+```
+**authRecordList** v0.1.9
+Retrieve list authentication records from UPAM
+```
+```
+**AccessRoleProfileList** v0.1.9
+Retrieve list of Access role profile templates
+```
